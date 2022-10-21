@@ -1,7 +1,5 @@
-const names = require('./names') // import names from names.js
-const sayHi = require('./utils')
-const data = require('./alternative-flavor')
-console.log(data)
-sayHi('Simon')
-sayHi(names.carl)
-sayHi(names.david)
+const _ = require('lodash');
+
+const items = [1, [2, [3, [4]]]];
+const newItems = _.flattenDeep(items); // funkcja zamieni tablice wielowymiarową 'items' na jednowymiarowa 'newItems'
+console.log(newItems)
